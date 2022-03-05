@@ -12,6 +12,26 @@
   --secondary-button-text: #000;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--on-background-alt);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #75B3FF;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -102,7 +122,11 @@ h1 {
 }
 
 .project-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-top: 10px;
+  width: 100%;
 }
 
 .project-description-hz {
@@ -117,16 +141,25 @@ h1 {
 .project-card-container-hz {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-card-image-container {
   display: flex;
   flex-direction: row;
   justify-content: start;
+  overflow: auto;
 }
 
 .project-image {
-  margin-right: 10px;
+  margin-right: 3px;
+  width: 200px;
+}
+
+.project-image img {
+  width: 100%;
+  /* height: 100%; */
 }
 
 .project-card {
@@ -137,7 +170,7 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   transition: 0.3s;
   max-width: 1000px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .project-card:hover {
@@ -148,11 +181,140 @@ h1 {
 
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  padding-top: 150px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.close {
+  position: absolute;
+  top: 45px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buttons {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
+}
+
+
+button {
+  min-width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+
+.primary {
+  color: var(--primary-button-text);
+  border: 2px solid var(--primary-button);
+  background: var(--primary-button);
+}
+
+.secondary {
+  color: var(--secondary-button-text);
+  border: 2px solid var(--secondary-button);
+  background: var(--secondary-button);
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+.google-link img {
+  max-height: 250px;
+  max-width: 250px;
+}
+
+.google-link a {
+  border-style: none
+}
+
 @media screen and (max-width: 1000px) {
+  .project-card-container-hz {
+    align-items: flex-start;
+  }
+  .project-card-image-container {
+    width: 80%;
+  }
   .projects-header {
     margin: 0 10px 0 10px;
   }
   .project-card {
-    margin: 0 10px 0 10px;
+    margin: 0 10px 30px 10px;
+    max-width: 700px;
+  }
+}
+@media only screen and (max-width: 700px){
+  .project-card-image-container {
+    flex-wrap: wrap;
+  }
+  .modal-content {
+    width: 100%;
+  }
+  .project-card {
+    margin: 0 10px 30px 10px;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .project-card-container-hz {
+    align-items: center;
+  }
+  .project-card-image-container {
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-y: scroll;
+    max-height: 500px;
+  }
+  .project-image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .modal {
+    padding-top: 50px;
   }
 }

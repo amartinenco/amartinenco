@@ -49,38 +49,71 @@
           </div>
           <div class="project-card">
             <div class="project-title">
-              <h3>Title</h3>
+              <h3>WebRTC Video Chat</h3>
             </div>
             <div class="project-card-container-hz">
               <div class="project-card-image-container">
-                <div class="project-image">
-                  <img src="https://via.placeholder.com/150" alt="">
+                 <div class="project-image" id="project-image" onclick="showModal(this)">
+                  <img src="img/login.jpg" alt="">
                 </div>
-                <div class="project-image">
-                  <img src="https://via.placeholder.com/150" alt="">
+                <div class="project-image" id="project-image" onclick="showModal(this)">
+                  <img src="img/chat-3.jpg" alt="">
                 </div>
-                <div class="project-image">
-                  <img src="https://via.placeholder.com/150" alt="">
+                <div class="project-image" id="project-image" onclick="showModal(this)">
+                  <img src="img/register.jpg" alt="">
+                </div>                
+                <div class="project-image" id="project-image" onclick="showModal(this)">
+                  <img src="img/calling.jpg" alt="">
                 </div>
               </div>
               <div class="project-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel distinctio impedit saepe pariatur sint quae quidem, ex, expedita cupiditate, nostrum reiciendis sapiente natus commodi neque harum iure alias tempora. Excepturi.
+                This is video WebRTC Video Chat that allows user to make video calls to each other.
+                <br><br>
+                Features:
+                <ul>
+                  <li>WebRTC Video Calling</li>
+                  <li>Text chat</li>
+                  <li>Screen sharing</li>
+                  <li>Authentication</li>
+                </ul>
+                Front End: ReactJS, TypeScript, MaterialUI
+                <br><br>
+                Back End: NodeJS, MongoDB, Redis, Heroku
+              </div>
+              <div>
+                <div class="buttons">
+                  <button class="primary" onclick="window.open('https://juptr-mart112.herokuapp.com','_blank');">Live Demo</button>
+                  <button class="secondary" onclick="window.open('https://github.com/amartinenco/juptr-chat','_blank');">FE GitHub</button>
+                  <button class="secondary" onclick="window.open('https://github.com/amartinenco/juptr-chat-server','_blank');">BE GitHub</button>
+                </div>
               </div>
             </div>
           </div>
           
-          <!-- <div class="project-card">
+           <div class="project-card">
             <div class="project-title">
-              Title
+              <h3>AstroWarp</h3>
             </div>
             <div class="project-image">
-              <img src="https://via.placeholder.com/150" alt="">
+              <img src="img/astrowarp.webp" alt="">
             </div>
             <div class="project-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel distinctio impedit saepe pariatur sint quae quidem, ex, expedita cupiditate, nostrum reiciendis sapiente natus commodi neque harum iure alias tempora. Excepturi.
+              A Video Game written in Java with LibGDX framework.
+              <br><br>
+              <ul>
+                <li>Spacial Hashing for collision detection</li>
+                <li>Object Pooling</li>
+                <li>Custom made touch controls</li>
+              </ul>
+              <div class="google-link">
+                <a href='https://play.google.com/store/apps/details?id=com.mygdx.spacegame&hl=en_CA&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' 
+                  target="_blank">
+                  <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
+                </a>
+              </div>
             </div>
           </div>
-
+<!--
           <div class="project-card">
             <div class="project-title">
               Title
@@ -118,16 +151,15 @@
     <!-- <section id="contact">
       <h1>Contact</h1>
     </section> -->
-    <!-- <h1>About me</h1> -->
-          <!-- <img src="https://via.placeholder.com/150" alt=""> -->
-    <!-- </section> -->
-    <!-- </section> -->
-    <!-- <section id="projects">
-      <h1>Projects</h1>
-    </section>
-    <section id="contact">
-      <h1>Contact</h1>
-    </section> -->
   </main>
+
+  <!-- The Modal -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgModal">
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
