@@ -114,10 +114,22 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: column;
+  /* height: 100vh; */
+}
+
+.contact-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  width: 800px;
 }
 
 .projects-header {
+  padding-top: 100px;
+}
+
+.contact-header {
   padding-top: 100px;
 }
 
@@ -233,7 +245,6 @@ a.button {
   color: initial;
 }
 
-
 button {
   min-width: 100px;
   height: 40px;
@@ -244,6 +255,16 @@ button {
   outline: none;
 }
 
+.sm-button {
+  cursor: pointer;
+  font-size: 150px;
+  height: 200px;
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  color: var(--on-background);
+  background: var(--header-background);
+}
 
 .primary {
   color: var(--primary-button-text);
@@ -287,6 +308,9 @@ button:hover {
   .about-container {
     max-width: 400px;
   }
+  .contact-container {
+    max-width: 700px;
+  }
   h1 {
     font-size: 65px;
   }
@@ -300,11 +324,16 @@ button:hover {
   }
   .project-card {
     margin: 0 10px 30px 10px;
-    max-width: 300px;
+    max-width: 600px;
   }
-  /* .about-container {
-    max-width: 400px;
-  } */
+  .contact-container {
+    max-width: 480px;
+  }
+  .sm-button {
+    font-size: 50px;
+    height: 80px;
+    width: 80px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -329,8 +358,19 @@ button:hover {
   .about-container {
     max-width: 300px;
   }
+  .contact-container {
+    max-width: 340px;
+    margin: 0 10px 0 10px;
+  }
   h1 {
     font-size: 40px;
+  }
+  .contact-links {}
+    
+  .sm-button {
+    font-size: 75px;
+    height: 100px;
+    width: 100px;
   }
 }
 
@@ -338,8 +378,22 @@ button:hover {
   .about-container {
     max-width: 200px;
   }
+  .contact-container {
+    max-width: 200px;
+  }
   h1 {
     font-size: 30px;
+  }
+  .contact-header {
+    margin-top: 50px;
+  }
+  .contact-links {
+    width: 300px;
+  }
+  .sm-button {
+    font-size: 35px;
+    height: 50px;
+    width: 50px;
   }
 }
 
