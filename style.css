@@ -178,7 +178,7 @@ h1 {
 }
 
 .about-text {
-
+  
 }
 
 .modal {
@@ -284,6 +284,12 @@ button:hover {
     margin: 0 10px 30px 10px;
     max-width: 700px;
   }
+  .about-container {
+    max-width: 400px;
+  }
+  h1 {
+    font-size: 65px;
+  }
 }
 @media only screen and (max-width: 700px){
   .project-card-image-container {
@@ -296,6 +302,9 @@ button:hover {
     margin: 0 10px 30px 10px;
     max-width: 300px;
   }
+  /* .about-container {
+    max-width: 400px;
+  } */
 }
 
 @media screen and (max-width: 700px) {
@@ -311,7 +320,29 @@ button:hover {
   .project-image {
     width: 100%;
   }
+  h1 {
+    font-size: 60px;
+  }
 }
+
+@media screen and (max-width: 480px) {
+  .about-container {
+    max-width: 300px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .about-container {
+    max-width: 200px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+
 
 @media screen and (max-height: 400px) {
   .modal {
